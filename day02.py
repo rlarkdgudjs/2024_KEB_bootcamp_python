@@ -1,8 +1,7 @@
-base = int(input('base : '))
-exponent = int(input('exp : '))
-# f-string
-# print(f'밑은 {base}, 시수는 {exponent}, 결과값은 {base**exponent}')
-print(f'밑은 {base}, 시수는 {exponent}, 결과값은 {pow(base, exponent)}')
+n_1st = int(input("First number : "))
+n_2nd = int(input("Second number : "))
 
-# format function
-print('밑은 {0}, 시수는 {1}, 결과값은 {2}'.format(base, exponent, base**exponent))
+quotient = n_1st // n_2nd
+remainder = n_1st % n_2nd
+print(f'몫은 {quotient} 나머지는 {remainder}')
+print(f'몫은 {divmod(n_1st,n_2nd)[0]} 나머지는 {divmod(n_1st,n_2nd)[1]}')
