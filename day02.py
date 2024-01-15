@@ -1,7 +1,7 @@
-n_1st = int(input("First number : "))
-n_2nd = int(input("Second number : "))
+dec = 65
+oct = 0o101
+hex = 0x41
+bin = 0b01000001
 
-quotient = n_1st // n_2nd
-remainder = n_1st % n_2nd
-print(f'몫은 {quotient} 나머지는 {remainder}')
-print(f'몫은 {divmod(n_1st,n_2nd)[0]} 나머지는 {divmod(n_1st,n_2nd)[1]}')
+print(dec,oct,hex,bin)
+print(chr(bin))
