@@ -1,17 +1,18 @@
 # prime number
-number = int(input("INPUT number : "))
-is_prime = True
+start, finish = map(int, input("INPUT 'start finish' : ").split())
 
-if number < 2:
-    print(f'{number} is not prime number')
-else:
-    for i in range(2, number):
-        if number % i == 0:
-            is_prime = False
-            break
-
-    if is_prime:
-        print(f'{number} is prime number')
+if start > finish:
+    start, finish = finish, start
+for number in range(start, finish + 1):
+    is_prime = True
+    if number < 2:
+        pass
     else:
-        print(f'{number} is not prime number')
+        for j in range(2, number):
+            if number % j == 0:
+                is_prime = False
+                break
+        if is_prime:
+            print(number, end=' ')
+
 
