@@ -1,8 +1,13 @@
-subjects = "python c++ database linux"
-subject = input("수강신청과목 입력 : ")
+#prime number
+number = int(input("INPUT number : "))
+count = 0
+i = 1
+while i <= number:
+    if number % i == 0:
+        count += 1
+    i += 1
 
-try:
-    print(f"해당 과목은 존재합니다. 위치는 {subjects.index(subject)}번 인덱스입니다.")
-except ValueError:
-    print(f'해당 과목은 존재하지 않습니다.')
-
+if count == 2:
+    print(f'{number} is prime number')
+else:
+    print(f'{number} is not prime number')
