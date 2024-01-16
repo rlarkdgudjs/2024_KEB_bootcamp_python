@@ -1,18 +1,6 @@
-course = "* KEB 2024# KEB !Bootcamp KEB...*!#"
-print(course.find('KEB'))
-print(course.rfind('KEB'))
-print(course.index('KEB'))
-
-
-# subjects = ["python", "c++", "database"]
-# subjects_string = " ".join(subjects)
-# print(subjects_string)
-
-# numbers = input("FirstNumber SecodNumber : ").split()
-# # print(numbers[0] + numbers[1]) # concatenation
-# print(int(numbers[0]) + int(numbers[1])) # arithmetic operation
-
-# course = "2024 KEB Bootcamp"
-# print(course)
-# list_course = course.split('B')
-# print(list_course)
+subjects = "python c++ database linux"
+subject = input("수강신청과목 입력 : ")
+if subjects.find(subject) != -1:
+    print(f"해당 과목은 존재합니다. 위치는 {subjects.find(subject)}번 인덱스입니다.")
+else:
+    print(f'해당 과목은 존재하지 않습니다.')
