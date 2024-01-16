@@ -1,15 +1,17 @@
-univ = "inha"
-i = 0
-while i < len(univ):
-    print(univ[i], end='')
-    i += 1
+# prime number
+number = int(input("INPUT number : "))
+is_prime = True
 
-print()
+if number < 2:
+    print(f'{number} is not prime number')
+else:
+    for i in range(2, number):
+        if number % i == 0:
+            is_prime = False
+            break
 
-for j in univ:
-    print(j, end='')
+    if is_prime:
+        print(f'{number} is prime number')
+    else:
+        print(f'{number} is not prime number')
 
-print()
-
-for k in range(len(univ)):
-    print(univ[k], end='')
