@@ -1,5 +1,6 @@
-menu = input("1) ºF -> ºC   2) ºC -> ºF   3) Quit ")
-while menu != '3':
+
+while True:
+    menu = input("1) ºF -> ºC   2) ºC -> ºF   3) Quit ")
     if menu == '1':
         Fahrenheit = float(input('INPUT Fahrenheit : '))
         Calculate_Celsius = (Fahrenheit - 32) * 5 / 9
@@ -8,5 +9,6 @@ while menu != '3':
         Celsius = float(input('INPUT Celsius : '))
         Calculate_Fahrenheit = (Celsius * 9 / 5) + 32
         print(f'섭씨 : {Celsius}ºC 화씨 : {Calculate_Fahrenheit:.4f}ºF')
-    menu = input("1) ºF -> ºC   2) ºC -> ºF   3) Quit ")
+    elif menu == '3':
+        break
 print("종료")
