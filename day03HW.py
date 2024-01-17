@@ -40,7 +40,9 @@ while True:
                 if is_prime:
                     print(number, end=' ')
         print('\n')
-    else:
+    elif menu == "5":
+        print("종료")
         break
+    else:
+        print("INVALID MENU")
 
-print("종료")
