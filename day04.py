@@ -1,15 +1,5 @@
-import copy
-# subjects = ["a", "b", "13"]
-subjects = ["a", ["b", "13"], "d"]
-a = subjects
-b = subjects.copy()
-c = list(a)
-d = subjects[:]
-e = copy.deepcopy(subjects)
+# squares = [i*i for i in range(1, 6)]  # list comprehension
+# print(squares)
 
-print(subjects, a, b, c, d, e)
-subjects[1][1] = "x"
-print(subjects, a, b, c, d, e) # 리스트 원소중에 mutable 한값이 바뀌면 shallow copy한 값들도 같이 바뀜
-# pythontutor.com
-
-
+even_squares = [i*i for i in range(1, 6) if i%2==0]
+print(even_squares)
