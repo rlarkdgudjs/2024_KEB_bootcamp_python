@@ -45,4 +45,4 @@ while True:
         break
     else:
         print("INVALID MENU")
-
+# 개선점 - 소수찾기 성능, 중복코드
