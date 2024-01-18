@@ -1,4 +1,18 @@
-
+def isprime(n) -> bool:
+    """
+    매개변수로 받은 수가 소수인지 여부를 boolean으로 리턴
+    :param n: 판정할 매개변수
+    :return: 소수면 True
+    """
+    if n < 2:
+        return False
+    else:
+        i = 2
+        while i*i <= n:
+            if n % i == 0:
+                return False
+            i += 1
+        return True
 while True:
     menu = input("1) ºF -> ºC   2) ºC -> ºF   3) 소수 판별하기 4)구간별 소수 구하기 5) 종료 ")
     if menu == '1':
@@ -11,34 +25,18 @@ while True:
         print(f'섭씨 : {Celsius}ºC 화씨 : {Calculate_Fahrenheit:.4f}ºF')
     elif menu == '3':
         num_3 = int(input("INPUT number : "))
-        is_prime = True
-        if num_3 < 2:
-            is_prime = False
-            print(f'{num_3}는 소수가 아닙니다')
+        if isprime(num_3):
+            print(f'{num_3}는 소수 입니다.')
         else:
-            for i in range(2, num_3):
-                if num_3 % i == 0:
-                    is_prime = False
-                    print(f'{num_3}는 소수가 아닙니다')
-                    break
-            if is_prime:
-                print(f'{num_3}는 소수 입니다.')
+            print(f'{num_3}는 소수가 아닙니다')
     elif menu == '4':
         start, finish = map(int, input("INPUT 'start finish' : ").split())
 
         if start > finish:
             start, finish = finish, start
         for number in range(start, finish + 1):
-            is_prime = True
-            if number < 2:
-                pass
-            else:
-                for j in range(2, number):
-                    if number % j == 0:
-                        is_prime = False
-                        break
-                if is_prime:
-                    print(number, end=' ')
+            if isprime(number):
+                 print(number, end=' ')
         print('\n')
     elif menu == "5":
         print("종료")
