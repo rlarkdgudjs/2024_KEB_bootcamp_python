@@ -18,7 +18,7 @@ def isprime(n) -> bool:
 
 start, finish = map(int, input("INPUT 'start finish' : ").split())
 
-if start > finish:
+if start > finish: # start, finish = min(start, finish), max(start, finish)
     start, finish = finish, start
 for number in range(start, finish + 1):
     if isprime(number):
