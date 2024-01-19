@@ -8,17 +8,22 @@ class SwimmingMixin:
 
 class Pokemon:
     def __init__(self,name):
-        self.name = name
+        self.hidden_name = name
 
     def attack(self):
-        print(f'{self.name}이(가) 공격!')
-
-    def get_name(self):
+        print(f'{self.hidden_name}이(가) 공격!')
+    @property
+    def name(self):
         print("이름 불러오는중")
-        return self.name
-    def set_name(self, new_name):
+        return self.hidden_name
+    @name.setter
+    def name(self, new_name):
         print('이름 설정중')
-        self.name = new_name
+        self.hidden_name = new_name
+
+    # input_name = property(get_name, set_name)
+
+
 class Charizard(Pokemon, FlyingMixin):
     pass
 
@@ -31,6 +36,13 @@ c1 = Charizard("리자몽")
 # print(g1.swim())
 # print(c1.fly())
 # Charizard.attack(c1)
-print(g1.get_name())
-g1.set_name('잉어킹')
-print(g1.get_name())
+
+# print(g1.get_name())
+# g1.set_name('잉어킹')
+# print(g1.get_name())
+# g1.input_name = '붉은 갸라도스'
+# print(g1.input_name)
+
+print(g1.name)
+g1.name = '잉어킹'
+print(g1.name)
