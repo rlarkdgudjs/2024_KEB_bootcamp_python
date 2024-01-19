@@ -1,25 +1,25 @@
 class FlyingMixin:
     def fly(self):
-        return f'{self.name}이(가) 비행중입니다.'
+        return f'{self.__name}이(가) 비행중입니다.'
 
 class SwimmingMixin:
     def swim(self):
-        return f'{self.name}이(가) 수영중입니다.'
+        return f'{self.__name}이(가) 수영중입니다.'
 
 class Pokemon:
     def __init__(self,name):
-        self.hidden_name = name
+        self.__name = name
 
     def attack(self):
-        print(f'{self.hidden_name}이(가) 공격!')
+        print(f'{self.__name}이(가) 공격!')
     @property
     def name(self):
         print("이름 불러오는중")
-        return self.hidden_name
+        return self.__name
     @name.setter
     def name(self, new_name):
         print('이름 설정중')
-        self.hidden_name = new_name
+        self.__name = new_name
 
     # input_name = property(get_name, set_name)
 
@@ -45,4 +45,7 @@ c1 = Charizard("리자몽")
 
 print(g1.name)
 g1.name = '잉어킹'
+print(g1.name)
+print(g1._Pokemon__name)
+g1._Pokemon__name = '갸랴도스'
 print(g1.name)
