@@ -13,6 +13,12 @@ class Pokemon:
     def attack(self):
         print(f'{self.name}이(가) 공격!')
 
+    def get_name(self):
+        print("이름 불러오는중")
+        return self.name
+    def set_name(self, new_name):
+        print('이름 설정중')
+        self.name = new_name
 class Charizard(Pokemon, FlyingMixin):
     pass
 
@@ -25,6 +31,6 @@ c1 = Charizard("리자몽")
 # print(g1.swim())
 # print(c1.fly())
 # Charizard.attack(c1)
-print(g1.name)
-g1.name = '잉어킹'
-print(g1.name)
+print(g1.get_name())
+g1.set_name('잉어킹')
+print(g1.get_name())
