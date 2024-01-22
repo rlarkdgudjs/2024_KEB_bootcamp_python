@@ -2,7 +2,7 @@
 def good():
     return ['Harry', 'Ron', 'Hermione']
 #9.2
-def get_odds(first=0, end=10, step=2):
+def get_odds(first=1, end=10, step=2):
     n = first
     while n < end:
         yield n
