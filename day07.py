@@ -22,9 +22,13 @@ class Pokemon:
         self.__name = new_name
 
     # input_name = property(get_name, set_name)
+
+    # magic method
     def __str__(self):
         return self.__name + " 입니다."
 
+    def __add__(self, target):
+        return self.__name + " + " + target.__name
 
 class Charizard(Pokemon, FlyingMixin):
     pass
@@ -36,4 +40,4 @@ g1 = Gyarados("갸랴도스")
 c1 = Charizard("리자몽")
 print(g1)
 print(c1)
-print(
+print(g1 + c1)
