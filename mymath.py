@@ -13,3 +13,7 @@ def isprime(n) -> bool:
                 return False
             i += 1
         return True
+
+
+def fahrenheit_to_celsius(Fahrenheit):
+    return ((Fahrenheit - 32) * 5 / 9)

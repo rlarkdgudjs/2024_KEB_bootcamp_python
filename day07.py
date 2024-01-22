@@ -5,7 +5,7 @@ while True:
     menu = input("1) ºF -> ºC   2) ºC -> ºF   3) 소수 판별하기 4)구간별 소수 구하기 5) 종료 ")
     if menu == '1':
         Fahrenheit = float(input('INPUT Fahrenheit : '))
-        Calculate_Celsius = (Fahrenheit - 32) * 5 / 9
+        Calculate_Celsius = mymath.fahrenheit_to_celsius(Fahrenheit)
         print(f'화씨 : {Fahrenheit}ºF 섭씨 : {Calculate_Celsius:.4f}ºC')
     elif menu == '2':
         Celsius = float(input('INPUT Celsius : '))
