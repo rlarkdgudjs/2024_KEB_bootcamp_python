@@ -1,0 +1,18 @@
+1.introduction
+2.ls, ls -a, ls -al, clear, touch, rm, echo (linux 명령어)
+3.git init, git status, git add 파일명, git commit -m "message", git config ... (git 명령어)
+4.git log, git checkout 해시코드, git checkout - (git 명령어)
+git remote add origin 리포지토리주소, git remote -v, git push -u origin main, git remove origin, git branch -M main
+
+echo "# 123" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/rlarkdgudjs/123.git
+git push -u origin main
+
+
+git remote add origin https://github.com/rlarkdgudjs/123.git
+git branch -M main
+git push -u origin main

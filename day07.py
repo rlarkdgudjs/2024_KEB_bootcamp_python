@@ -9,7 +9,7 @@ while True:
         print(f'화씨 : {Fahrenheit}ºF 섭씨 : {Calculate_Celsius:.4f}ºC')
     elif menu == '2':
         Celsius = float(input('INPUT Celsius : '))
-        Calculate_Fahrenheit = (Celsius * 9 / 5) + 32
+        Calculate_Fahrenheit = mymath.celsius_to_fahrenheit(Celsius)
         print(f'섭씨 : {Celsius}ºC 화씨 : {Calculate_Fahrenheit:.4f}ºF')
     elif menu == '3':
         num_3 = int(input("INPUT number : "))
